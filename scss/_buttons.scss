@@ -1,0 +1,21 @@
+%btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  transition: transform 0.3s ease-in-out;
+
+  &.btn-primary {
+    transform: scale(0.98);
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  @include set-colors(lighten($primary-color, 10));
+}
+
+.btn-secondary {
+  @extend %btn;
+  background-color: darken($color: $secondary-color, $amount: 10);
+}
